@@ -42,6 +42,33 @@ class StubQueryService:
         )
 
 
+class MarketingQueryService:
+    def search(self, query: str) -> SearchResponse:
+        return SearchResponse(
+            query=query,
+            total_returned=2,
+            grounded_by_llm=True,
+            results=[
+                SearchResult(
+                    rank=1,
+                    vendor_name="Beta Labs LLC",
+                    summary="supplier_name: Beta Labs LLC\nclient_category: MARKETING",
+                    reason="Exact category match",
+                    metadata={"client_category": "MARKETING", "source_row_number": 3},
+                    score=100.0,
+                ),
+                SearchResult(
+                    rank=2,
+                    vendor_name="Beta Labs LLC",
+                    summary="supplier_name: Beta Labs LLC\nclient_category: MARKETING",
+                    reason="Exact category match",
+                    metadata={"client_category": "MARKETING", "source_row_number": 13},
+                    score=99.0,
+                ),
+            ],
+        )
+
+
 def test_index_endpoint_returns_summary_shape() -> None:
     app.dependency_overrides[get_index_service] = lambda: StubIndexService()
     client = TestClient(app)
@@ -67,5 +94,20 @@ def test_search_endpoint_returns_top_results_shape() -> None:
     assert payload["total_returned"] == 1
     assert payload["results"][0]["vendor_name"] == "ABC Chemicals"
     assert payload["results"][0]["metadata"]["location"] == "Houston, TX"
+
+    app.dependency_overrides.clear()
+
+
+def test_search_endpoint_keeps_contiguous_ranks_for_marketing_results() -> None:
+    app.dependency_overrides[get_index_service] = lambda: StubIndexService()
+    app.dependency_overrides[get_query_service] = lambda: MarketingQueryService()
+    client = TestClient(app)
+
+    response = client.get("/search", params={"q": "marketing"})
+
+    assert response.status_code == 200
+    payload = response.json()
+    assert [item["rank"] for item in payload["results"]] == [1, 2]
+    assert all(item["metadata"]["client_category"] == "MARKETING" for item in payload["results"])
 
     app.dependency_overrides.clear()
