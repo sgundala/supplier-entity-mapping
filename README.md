@@ -98,6 +98,25 @@ Notes:
 - use `HF_LOCAL_FILES_ONLY=false` in containers so the embedding model can download on first run
 - the container uses `data/raw/` as the default input directory
 
+### Docker Compose
+
+For one-command startup:
+
+```bash
+docker compose up --build
+```
+
+Then open:
+
+- `http://localhost:8000`
+
+The compose setup:
+
+- reads runtime secrets from your local `.env`
+- mounts `data/raw/` into the container
+- persists Chroma data in `storage/chroma/`
+- forces `HF_LOCAL_FILES_ONLY=false` so first-run model downloads work inside the container
+
 ## Search Behavior
 
 - retrieval is grounded in your local ChromaDB supplier index
