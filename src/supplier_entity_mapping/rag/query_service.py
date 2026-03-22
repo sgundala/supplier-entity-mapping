@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import logging
 import re
 from textwrap import dedent
 
@@ -14,6 +15,8 @@ from supplier_entity_mapping.models.schemas import (
     SearchResponse,
     SearchResult,
 )
+
+logger = logging.getLogger(__name__)
 
 
 class QueryService:
@@ -226,6 +229,8 @@ class QueryService:
 
     def _llm_rank_results(self, query: str, candidates: list[SearchResult]) -> list[SearchResult]:
         if not self.settings.groq_api_key or not candidates:
+            if not self.settings.groq_api_key:
+                logger.info("GROQ_API_KEY not set; skipping LLM ranking")
             return candidates[: self.settings.result_limit]
 
         llm = ChatGroq(
@@ -233,13 +238,23 @@ class QueryService:
             model=self.settings.groq_model_name,
             temperature=0,
         )
+        logger.debug("Invoking LLM ranking for query=%r with %d candidates", query, len(candidates))
         response = llm.invoke(self._build_prompt(query, candidates))
         content = getattr(response, "content", "")
         if isinstance(content, list):
             content = "".join(str(item) for item in content)
 
-        payload = self._parse_json_payload(content)
-        selection = LlmSearchResponse.model_validate(payload)
+        try:
+            payload = self._parse_json_payload(content)
+            selection = LlmSearchResponse.model_validate(payload)
+        except Exception:
+            logger.warning(
+                "Failed to parse LLM response for query=%r; falling back to vector ranking. "
+                "Raw LLM content: %.500s",
+                query,
+                content,
+            )
+            return candidates[: self.settings.result_limit]
 
         selected_results: list[SearchResult] = []
         used_keys: set[tuple[str, int | None]] = set()
@@ -284,6 +299,9 @@ class QueryService:
             ranked_results = self._llm_rank_results(query, candidates)
             grounded_by_llm = bool(self.settings.groq_api_key)
         except Exception:
+            logger.exception(
+                "LLM ranking failed for query=%r; returning unranked candidates", query
+            )
             ranked_results = candidates[: self.settings.result_limit]
             grounded_by_llm = False
 
