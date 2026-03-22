@@ -1,0 +1,51 @@
+supplier_name,supplier_code,client_category,sourcing_country,supplier_hq,supplier_address,supplier_web,employees,revenue,risk_score,supply_stability,technology_disruption
+Alpha Biologics Inc,100001,R&D - CLINICAL DEV,United States,United States,120 Main St Boston MA,https://alphabio.com,1200,$450M,1.8,Global,Moderate
+Alpha Bio Inc,100002,R&D - CLINICAL DEV,United States,United States,121 Main Street Boston MA,https://alphabio.com,1180,$445M,1.9,Global,Moderate
+Beta Labs LLC,100003,MARKETING,United States,United States,45 Park Ave NY,https://betalabs.com,300,$80M,1.5,Local,Low
+Gamma Pharma Ltd,100004,SUPPLY CHAIN,India,India,MG Road Bangalore,https://gammapharma.in,2200,$600M,2.1,Global,High
+Gamma Pharmaceuticals,100005,SUPPLY CHAIN,India,India,M G Rd Bengaluru,https://gammapharma.in,2250,$610M,2.0,Global,High
+Delta Analytics,100006,BUSINESS SERVICES,United States,United States,900 Market St SF,https://deltaanalytics.com,850,$210M,1.6,Regional,Moderate
+Epsilon Chem Corp,100007,SUPPLY CHAIN - CHEM,China,China,Shenzhen Industrial Zone,https://epsilonchem.cn,4000,$1.2B,2.5,Global,High
+Zeta BioSystems,100008,R&D - RESEARCH,Germany,Germany,Berlin Tech Park,https://zetabio.de,600,$150M,1.4,Global,Low
+Eta Diagnostics,100009,CLINICAL SERVICES,United States,United States,Chicago IL,https://etadiag.com,1100,$300M,1.7,Global,Moderate
+Theta Logistics,100010,LOGISTICS,United States,United States,Dallas TX,https://thetalogistics.com,5000,$2B,2.3,Global,Moderate
+Alpha Biologics Inc,100001,R&D - CLINICAL DEV,United States,United States,120 Main St Boston MA,https://alphabio.com,1200,$450M,1.8,Global,Moderate
+Alpha Bio Inc,100002,R&D - CLINICAL DEV,United States,United States,121 Main Street Boston MA,https://alphabio.com,1180,$445M,1.9,Global,Moderate
+Beta Labs LLC,100003,MARKETING,United States,United States,45 Park Ave NY,https://betalabs.com,300,$80M,1.5,Local,Low
+Gamma Pharma Ltd,100004,SUPPLY CHAIN,India,India,MG Road Bangalore,https://gammapharma.in,2200,$600M,2.1,Global,High
+Gamma Pharmaceuticals,100005,SUPPLY CHAIN,India,India,M G Rd Bengaluru,https://gammapharma.in,2250,$610M,2.0,Global,High
+Delta Analytics,100006,BUSINESS SERVICES,United States,United States,900 Market St SF,https://deltaanalytics.com,850,$210M,1.6,Regional,Moderate
+Epsilon Chem Corp,100007,SUPPLY CHAIN - CHEM,China,China,Shenzhen Industrial Zone,https://epsilonchem.cn,4000,$1.2B,2.5,Global,High
+Zeta BioSystems,100008,R&D - RESEARCH,Germany,Germany,Berlin Tech Park,https://zetabio.de,600,$150M,1.4,Global,Low
+Eta Diagnostics,100009,CLINICAL SERVICES,United States,United States,Chicago IL,https://etadiag.com,1100,$300M,1.7,Global,Moderate
+Theta Logistics,100010,LOGISTICS,United States,United States,Dallas TX,https://thetalogistics.com,5000,$2B,2.3,Global,Moderate
+Alpha Biologics Inc,100001,R&D - CLINICAL DEV,United States,United States,120 Main St Boston MA,https://alphabio.com,1200,$450M,1.8,Global,Moderate
+Alpha Bio Inc,100002,R&D - CLINICAL DEV,United States,United States,121 Main Street Boston MA,https://alphabio.com,1180,$445M,1.9,Global,Moderate
+Beta Labs LLC,100003,MARKETING,United States,United States,45 Park Ave NY,https://betalabs.com,300,$80M,1.5,Local,Low
+Gamma Pharma Ltd,100004,SUPPLY CHAIN,India,India,MG Road Bangalore,https://gammapharma.in,2200,$600M,2.1,Global,High
+Gamma Pharmaceuticals,100005,SUPPLY CHAIN,India,India,M G Rd Bengaluru,https://gammapharma.in,2250,$610M,2.0,Global,High
+Delta Analytics,100006,BUSINESS SERVICES,United States,United States,900 Market St SF,https://deltaanalytics.com,850,$210M,1.6,Regional,Moderate
+Epsilon Chem Corp,100007,SUPPLY CHAIN - CHEM,China,China,Shenzhen Industrial Zone,https://epsilonchem.cn,4000,$1.2B,2.5,Global,High
+Zeta BioSystems,100008,R&D - RESEARCH,Germany,Germany,Berlin Tech Park,https://zetabio.de,600,$150M,1.4,Global,Low
+Eta Diagnostics,100009,CLINICAL SERVICES,United States,United States,Chicago IL,https://etadiag.com,1100,$300M,1.7,Global,Moderate
+Theta Logistics,100010,LOGISTICS,United States,United States,Dallas TX,https://thetalogistics.com,5000,$2B,2.3,Global,Moderate
+Alpha Biologics Inc,100001,R&D - CLINICAL DEV,United States,United States,120 Main St Boston MA,https://alphabio.com,1200,$450M,1.8,Global,Moderate
+Alpha Bio Inc,100002,R&D - CLINICAL DEV,United States,United States,121 Main Street Boston MA,https://alphabio.com,1180,$445M,1.9,Global,Moderate
+Beta Labs LLC,100003,MARKETING,United States,United States,45 Park Ave NY,https://betalabs.com,300,$80M,1.5,Local,Low
+Gamma Pharma Ltd,100004,SUPPLY CHAIN,India,India,MG Road Bangalore,https://gammapharma.in,2200,$600M,2.1,Global,High
+Gamma Pharmaceuticals,100005,SUPPLY CHAIN,India,India,M G Rd Bengaluru,https://gammapharma.in,2250,$610M,2.0,Global,High
+Delta Analytics,100006,BUSINESS SERVICES,United States,United States,900 Market St SF,https://deltaanalytics.com,850,$210M,1.6,Regional,Moderate
+Epsilon Chem Corp,100007,SUPPLY CHAIN - CHEM,China,China,Shenzhen Industrial Zone,https://epsilonchem.cn,4000,$1.2B,2.5,Global,High
+Zeta BioSystems,100008,R&D - RESEARCH,Germany,Germany,Berlin Tech Park,https://zetabio.de,600,$150M,1.4,Global,Low
+Eta Diagnostics,100009,CLINICAL SERVICES,United States,United States,Chicago IL,https://etadiag.com,1100,$300M,1.7,Global,Moderate
+Theta Logistics,100010,LOGISTICS,United States,United States,Dallas TX,https://thetalogistics.com,5000,$2B,2.3,Global,Moderate
+Alpha Biologics Inc,100001,R&D - CLINICAL DEV,United States,United States,120 Main St Boston MA,https://alphabio.com,1200,$450M,1.8,Global,Moderate
+Alpha Bio Inc,100002,R&D - CLINICAL DEV,United States,United States,121 Main Street Boston MA,https://alphabio.com,1180,$445M,1.9,Global,Moderate
+Beta Labs LLC,100003,MARKETING,United States,United States,45 Park Ave NY,https://betalabs.com,300,$80M,1.5,Local,Low
+Gamma Pharma Ltd,100004,SUPPLY CHAIN,India,India,MG Road Bangalore,https://gammapharma.in,2200,$600M,2.1,Global,High
+Gamma Pharmaceuticals,100005,SUPPLY CHAIN,India,India,M G Rd Bengaluru,https://gammapharma.in,2250,$610M,2.0,Global,High
+Delta Analytics,100006,BUSINESS SERVICES,United States,United States,900 Market St SF,https://deltaanalytics.com,850,$210M,1.6,Regional,Moderate
+Epsilon Chem Corp,100007,SUPPLY CHAIN - CHEM,China,China,Shenzhen Industrial Zone,https://epsilonchem.cn,4000,$1.2B,2.5,Global,High
+Zeta BioSystems,100008,R&D - RESEARCH,Germany,Germany,Berlin Tech Park,https://zetabio.de,600,$150M,1.4,Global,Low
+Eta Diagnostics,100009,CLINICAL SERVICES,United States,United States,Chicago IL,https://etadiag.com,1100,$300M,1.7,Global,Moderate
+Theta Logistics,100010,LOGISTICS,United States,United States,Dallas TX,https://thetalogistics.com,5000,$2B,2.3,Global,Moderate

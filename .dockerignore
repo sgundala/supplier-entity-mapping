@@ -1,0 +1,15 @@
+.env
+.venv
+.venv311
+.pytest_cache
+.mypy_cache
+.ruff_cache
+__pycache__
+tests/__pycache__
+frontend/node_modules
+frontend/dist
+storage/chroma
+storage/cache
+storage/outputs
+notebooks
+docs
